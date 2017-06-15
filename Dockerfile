@@ -2,7 +2,7 @@
 FROM alpine:3.6
 MAINTAINER Dmitry Matrosov <amidos@amidos.me>
 
-ENV DOCKER_VERSION=17.03.1-ce \
+ENV DOCKER_VERSION=17.05.0-ce \
     DOCKER_COMPOSE_VERSION=1.13.0
 
 # Install Docker and Docker Compose
