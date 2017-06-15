@@ -1,13 +1,13 @@
 # Inspired by https://github.com/mumoshu/dcind
-FROM alpine:3.4
+FROM alpine:3.6
 MAINTAINER Dmitry Matrosov <amidos@amidos.me>
 
-ENV DOCKER_VERSION=1.13.1 \
-    DOCKER_COMPOSE_VERSION=1.11.1
+ENV DOCKER_VERSION=17.03.1-ce \
+    DOCKER_COMPOSE_VERSION=1.13.0
 
 # Install Docker and Docker Compose
 RUN apk --update --no-cache \
-    add curl device-mapper py-pip iptables && \
+    add curl jq device-mapper py-pip iptables && \
     rm -rf /var/cache/apk/* && \
     curl https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VERSION}.tgz | tar zx && \
     mv /docker/* /bin/ && chmod +x /bin/docker* && \
